@@ -20,7 +20,7 @@ OPTIONS:
  -h Shows this message
  -d distro example : -d gentoo or -d debian
 
-Distro's included : Gentoo, Debian, Ubuntu
+Distro's included : Gentoo, Debian, Ubuntu, Arch
 EOF
 }
 
@@ -81,8 +81,11 @@ distro()
         else
             echo -e "["$F"-"$B"] failed you are not using LTS versions of ubuntu"
         fi
+    elif [ $DISTRO = "Arch" -o "arch" ]
+    then
+	pacman -S tor
     else
-        echo -e "["$F"-"$B"] failed please use one of the following : Debian, Gentoo, Ubuntu"
+        echo -e "["$F"-"$B"] failed please use one of the following : Debian, Gentoo, Ubuntu, Arch"
         exit 1
 	fi
 }
@@ -100,14 +103,14 @@ do
 	 distro
 	;;
 	\?) valid=0
-	 echo "An invalid option has been entered: $OPTARG" >&2
+	 echo "An invalid option has been entered: $OPTARG"
 	 usage
 	 exit 1
 	;;
 	:)  valid=0
 	 echo "The additional argument for option $OPTARG was omitted." >&2
 	;;
-	esac
+     esac
 done
 
 
