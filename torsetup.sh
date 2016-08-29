@@ -20,7 +20,7 @@ OPTIONS:
  -h Shows this message
  -d distro example : -d gentoo or -d debian
 
-Distro's included : Gentoo, Debian, Ubuntu, CentOS
+Distro's included : Gentoo, Debian, Ubuntu
 EOF
 }
 
