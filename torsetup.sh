@@ -14,13 +14,11 @@ usage : $0 options
 
 This script is for quickly getting Tor relays online without any 3rd party software.
 
-example : $0 -d Debian -r exit
+example : $0 -d Debian
 
 OPTIONS:
  -h Shows this message
- -s build from source
  -d distro example : -d gentoo or -d debian
- -r relay or exit example : -r relay or -r exit
 
 Distro's included : Gentoo, Debian, Ubuntu, CentOS
 EOF
